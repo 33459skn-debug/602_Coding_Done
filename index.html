@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phetchabun — The Switzerland of Thailand</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Phetchabun<span class="logo-dot">.</span></a>
+  <nav class="quick-links">
+    <a href="attractions.html">Top Attractions</a>
+    <a href="stay-travel.html">Stay &amp; Travel</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About Us</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">เพชรบูรณ์ &mdash; central Thailand highlands</p>
+      <h1>The Switzerland<br>of Thailand</h1>
+      <p class="hero-sub">
+        Ridgelines wrapped in cool mist, sunrise seas of fog over Phu Thap Boek,
+        and valleys of strawberries where the mountains are the whole reason to come.
+      </p>
+      <div class="hero-actions">
+        <a href="attractions.html" class="btn btn-primary">Explore attractions</a>
+        <a href="index.html#travel" class="btn btn-ghost">Plan your route</a>
+      </div>
+    </div>
+
+    <div class="hero-scene">
+      <img src="images/hero-valley.jpg" alt="Misty highland valley near Phetchabun at sunrise, terraced fields and a winding road below forested ridges" loading="eager">
+    </div>
+  </section>
+
+  <section class="season-banner">
+    <p><span class="mono">BEST TIME TO VISIT</span> Nov &ndash; Feb &mdash; cool season, when the sea of mist rolls in over the ridgelines each morning.</p>
+  </section>
+
+  <section class="featured" id="attractions">
+    <div class="section-head">
+      <p class="eyebrow">Featured this season</p>
+      <h2>Where the mountains<br>show off</h2>
+    </div>
+
+    <div class="carousel" data-carousel>
+      <ul class="carousel-track" data-track>
+
+        <li class="card">
+          <img class="card-art" src="images/khao-kho.jpg" alt="Sunbeams breaking through cloud over the forested ridges of Khao Kho">
+          <div class="card-body">
+            <p class="mono card-tag">NATURAL &mdash; VIEWPOINT</p>
+            <h3>Khao Kho</h3>
+            <p>A national park of ridgeline roads, monuments and viewpoints strung across the cool highland air.</p>
+          </div>
+        </li>
+
+        <li class="card">
+          <img class="card-art" src="images/phu-thap-boek.jpg" alt="Sunrise over a sea of clouds seen from a campsite on Phu Thap Boek">
+          <div class="card-body">
+            <p class="mono card-tag">SUNRISE &mdash; SEA OF FOG</p>
+            <h3>Phu Thap Boek</h3>
+            <p>Arrive before dawn to watch the valley disappear beneath a slow-moving sea of cloud.</p>
+          </div>
+        </li>
+
+        <li class="card">
+          <img class="card-art" src="images/strawberry-farm.jpg" alt="A farmer harvesting strawberries on a terraced hillside farm">
+          <div class="card-body">
+            <p class="mono card-tag">FOOD &amp; LOCAL PRODUCTS</p>
+            <h3>Strawberries &amp; farm markets</h3>
+            <p>Cool-climate strawberries, roadside stalls and small farms open for picking through the winter.</p>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" data-prev aria-label="Previous">&larr;</button>
+        <button class="carousel-btn" data-next aria-label="Next">&rarr;</button>
+      </div>
+    </div>
+
+    <a href="attractions.html" class="text-link">See all attractions &rarr;</a>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-overview">
+      <p class="eyebrow">Overview</p>
+      <h2>Why &ldquo;the Switzerland of Thailand&rdquo;</h2>
+      <p>
+        Phetchabun sits in a ring of mountains in Thailand's lower north &mdash;
+        high enough that the air stays cool year-round and low clouds settle
+        into the valleys most mornings. The nickname started with visitors
+        comparing its ridgelines and pine-dotted highlands to the Alps, and
+        it stuck.
+      </p>
+    </div>
+    <div class="about-info">
+      <p class="eyebrow">About Phetchabun</p>
+      <ul class="fact-list">
+        <li><span class="mono">LOCATION</span> Lower northern Thailand, roughly 350&nbsp;km from Bangkok</li>
+        <li><span class="mono">CLIMATE</span> Cool highland air, especially November&ndash;February</li>
+        <li><span class="mono">KNOWN FOR</span> Mountain viewpoints, sea-of-fog sunrises, temple sites, strawberry farms</li>
+        <li><span class="mono">GETTING THERE</span> Car, bus or van from Bangkok &mdash; see route guide</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Phetchabun Tourism &mdash; a highland province in Thailand's lower north.</p>
+</footer>
+
+<script>
+  const track = document.querySelector('[data-track]');
+  const prevBtn = document.querySelector('[data-prev]');
+  const nextBtn = document.querySelector('[data-next]');
+
+  if (track && prevBtn && nextBtn) {
+    const scrollByCard = (dir) => {
+      const card = track.querySelector('.card');
+      if (!card) return;
+      const gap = parseFloat(getComputedStyle(track).columnGap || 0);
+      track.scrollBy({ left: dir * (card.offsetWidth + gap), behavior: 'smooth' });
+    };
+    prevBtn.addEventListener('click', () => scrollByCard(-1));
+    nextBtn.addEventListener('click', () => scrollByCard(1));
+  }
+
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.quick-links');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+</script>
+
+</body>
+</html>

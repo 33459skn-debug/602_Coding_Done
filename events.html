@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events &amp; Festivals — Phetchabun</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Phetchabun<span class="logo-dot">.</span></a>
+  <nav class="quick-links">
+    <a href="attractions.html">Top Attractions</a>
+    <a href="stay-travel.html">Stay &amp; Travel</a>
+    <a href="events.html" aria-current="page">Events</a>
+    <a href="about.html">About Us</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <img src="images/hero-valley.jpg" alt="Terraced highland valley near Phetchabun at sunrise">
+    <div class="page-hero-copy">
+      <p class="eyebrow">Events &amp; Festivals</p>
+      <h1>Things to do, by season and by interest</h1>
+      <p>From dawn hikes to farm visits &mdash; find your route through the highlands, whatever kind of trip you're after.</p>
+    </div>
+  </section>
+
+  <section class="interest-section" id="interests">
+    <p class="eyebrow" style="text-align:center">Browse by interest</p>
+    <h2 style="text-align:center; max-width:34ch; margin:0 auto;">Four ways to spend your time here</h2>
+
+    <div class="interest-grid">
+      <div class="interest-card">
+        <h3>Nature &amp; Trekking</h3>
+        <p>Ridge trails and viewpoint roads through Khao Kho and Phu Thap Boek, best walked at dawn before the mist burns off.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Culture &amp; Temples</h3>
+        <p>Local temples and monuments tucked into the highland towns, easy to combine with a viewpoint stop.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Food &amp; Farms</h3>
+        <p>Strawberry picking, farm stalls and highland produce &mdash; the cool climate that makes the views also makes the harvest.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Photography Spots</h3>
+        <p>Sea-of-fog sunrises, terraced fields and layered ridgelines &mdash; the province's most photographed hours are just after dawn.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="itinerary-section" id="itineraries">
+    <p class="eyebrow" style="text-align:center">Suggested itineraries</p>
+    <h2 style="text-align:center; max-width:30ch; margin:0 auto;">Pick a length, we'll pick a route</h2>
+
+    <div class="itinerary-grid">
+      <div class="itinerary-card">
+        <span class="itinerary-length">1 Day</span>
+        <h3>Sunrise &amp; back</h3>
+        <ul class="itinerary-steps">
+          <li>Before dawn &mdash; sea of fog at Phu Thap Boek</li>
+          <li>Mid-morning &mdash; viewpoints along Khao Kho</li>
+          <li>Midday &mdash; strawberry stall on the way down</li>
+        </ul>
+      </div>
+      <div class="itinerary-card">
+        <span class="itinerary-length">2 Days</span>
+        <h3>Nature &amp; culture</h3>
+        <ul class="itinerary-steps">
+          <li>Day 1 &mdash; sunrise, viewpoints, overnight in the highlands</li>
+          <li>Day 2 morning &mdash; local temples &amp; monuments</li>
+          <li>Day 2 afternoon &mdash; farm visit and markets</li>
+        </ul>
+      </div>
+      <div class="itinerary-card">
+        <span class="itinerary-length">3 Days</span>
+        <h3>The full loop</h3>
+        <ul class="itinerary-steps">
+          <li>Day 1 &mdash; Phu Thap Boek sunrise &amp; trekking</li>
+          <li>Day 2 &mdash; Khao Kho viewpoints &amp; temples</li>
+          <li>Day 3 &mdash; farms, markets &amp; photography stops</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="calendar-section" id="calendar">
+    <p class="eyebrow">Annual calendar</p>
+    <h2>Seasonal highlights</h2>
+
+    <ul class="season-list">
+      <li>
+        <span class="mono">NOV &ndash; FEB</span>
+        <p>Cool season &mdash; the best window for the sea of mist, clear ridgeline views and comfortable trekking weather.</p>
+      </li>
+      <li>
+        <span class="mono">DEC &ndash; FEB</span>
+        <p>Strawberry harvest across the highland farms, with picking and roadside stalls at their busiest.</p>
+      </li>
+      <li>
+        <span class="mono">DEC &ndash; JAN</span>
+        <p>Peak sea-of-fog mornings at Phu Thap Boek, when temperature swings between night and day are largest.</p>
+      </li>
+      <li>
+        <span class="mono">FEB &ndash; MAR</span>
+        <p>Cool-season flowers come into bloom across the highlands as the season turns toward the hotter months.</p>
+      </li>
+      <li>
+        <span class="mono">YEAR-ROUND</span>
+        <p>Local temple fairs and community festivals happen throughout the year &mdash; check locally for current dates before you go.</p>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Phetchabun Tourism &mdash; a highland province in Thailand's lower north.</p>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.quick-links');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+</script>
+
+</body>
+</html>

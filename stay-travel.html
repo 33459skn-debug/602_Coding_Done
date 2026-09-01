@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where to Stay &amp; How to Get There — Phetchabun</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Phetchabun<span class="logo-dot">.</span></a>
+  <nav class="quick-links">
+    <a href="attractions.html">Top Attractions</a>
+    <a href="stay-travel.html" aria-current="page">Stay &amp; Travel</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About Us</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <img src="images/khao-kho.jpg" alt="Sunbeams over the forested ridges of Khao Kho">
+    <div class="page-hero-copy">
+      <p class="eyebrow">Plan your trip</p>
+      <h1>Where to stay &amp; how to get there</h1>
+      <p>From picking a base to camp out of, to the route up from Bangkok and what to pack for the cold mornings.</p>
+    </div>
+  </section>
+
+  <section class="market-section" id="stay">
+    <p class="eyebrow">Where to stay</p>
+    <h2>Pick your base</h2>
+    <p style="max-width: 56ch; color: var(--forest);">
+      Most visitors base themselves near Khao Kho or Phu Thap Boek for easy
+      access to the sunrise viewpoints, or stay in town for more services and
+      a shorter drive to restaurants.
+    </p>
+
+    <div class="market-grid">
+      <div class="market-card">
+        <p class="mono">HIGHLAND RESORTS</p>
+        <h4>Resorts &amp; guesthouses</h4>
+        <p>Small resorts and guesthouses built along the ridges near Khao Kho and Phu Thap Boek, many with a view straight from the room.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">CAMPING</p>
+        <h4>Camp on the ridge</h4>
+        <p>Designated camping areas near the sunrise viewpoints let you wake up already in position for the sea of fog.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">FARM STAYS</p>
+        <h4>Homestays &amp; farm stays</h4>
+        <p>Family-run stays attached to strawberry and produce farms, a good fit if food and farms are the focus of your trip.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">IN TOWN</p>
+        <h4>Guesthouses in town</h4>
+        <p>More options and shorter drives to restaurants and markets, at the cost of a longer trip up to the viewpoints.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-group" id="travel">
+    <p class="eyebrow" style="text-align:center">How to get there</p>
+    <h2>From Bangkok</h2>
+
+    <div class="market-grid">
+      <div class="market-card">
+        <p class="mono">BY CAR</p>
+        <h4>Self-drive</h4>
+        <p>The most flexible option and the best for reaching sunrise viewpoints before dawn. Roughly 300&ndash;350&nbsp;km from Bangkok, mostly highway with a mountain climb on the final stretch.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">BY BUS</p>
+        <h4>Long-distance bus</h4>
+        <p>Regular coaches run from Bangkok's northern bus terminal to Phetchabun town. Cheapest option, but you'll need a local ride onward to the viewpoints.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">BY VAN</p>
+        <h4>Minivan</h4>
+        <p>Faster than the bus and still affordable, with more frequent departures &mdash; a common choice for smaller groups without a car.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="food-section">
+    <div class="food-band">
+      <img src="images/hero-valley.jpg" alt="Winding mountain road through terraced highland fields">
+      <div class="food-band-text">
+        <p class="eyebrow">Getting around Phetchabun</p>
+        <h3>Plan on having your own wheels</h3>
+        <p>
+          Public transport between the viewpoints and farms is limited, so
+          most visitors rent a car or motorbike once they arrive, or arrange
+          a driver for the day. Songthaews run between the larger towns but
+          don't reach most of the mountain viewpoints directly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="market-section">
+    <p class="eyebrow">Weather &amp; packing tips</p>
+    <h2>What to bring</h2>
+
+    <ul class="fact-list" style="max-width: 640px;">
+      <li><span class="mono">COOL SEASON (NOV&ndash;FEB)</span> Warm layers for early mornings &mdash; ridgeline temperatures can drop close to jacket weather well before sunrise.</li>
+      <li><span class="mono">RAINY SEASON (JUN&ndash;OCT)</span> Waterproof layer and grippy shoes &mdash; mountain roads and trails get slick.</li>
+      <li><span class="mono">HOT SEASON (MAR&ndash;MAY)</span> Sun protection for daytime, though evenings at altitude still cool off.</li>
+      <li><span class="mono">ALWAYS</span> A flashlight or phone torch for pre-dawn viewpoint hikes, and a reusable water bottle.</li>
+    </ul>
+  </section>
+
+  <section class="market-section" style="padding-top: 0;">
+    <p class="eyebrow">Map</p>
+    <h2>Find your way</h2>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps?q=Phetchabun,+Thailand&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map of Phetchabun, Thailand">
+      </iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Phetchabun Tourism &mdash; a highland province in Thailand's lower north.</p>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.quick-links');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+</script>
+
+</body>
+</html>

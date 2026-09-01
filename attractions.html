@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attractions — Phetchabun</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Phetchabun<span class="logo-dot">.</span></a>
+  <nav class="quick-links">
+    <a href="attractions.html" aria-current="page">Top Attractions</a>
+    <a href="stay-travel.html">Stay &amp; Travel</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About Us</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <img src="images/phu-thap-boek.jpg" alt="Sunrise over a sea of clouds on Phu Thap Boek">
+    <div class="page-hero-copy">
+      <p class="eyebrow">Attractions</p>
+      <h1>What to see in the highlands</h1>
+      <p>Natural viewpoints, sunrise seas of fog, and the farms and markets that come with cool mountain air.</p>
+    </div>
+  </section>
+
+  <section class="feature-group" id="natural">
+    <p class="eyebrow" style="text-align:center">Natural attractions</p>
+    <h2>Two mountains, two very<br>different mornings</h2>
+
+    <div class="feature-row">
+      <div class="feature-media">
+        <img src="images/khao-kho.jpg" alt="Sunbeams breaking through cloud over the forested ridges of Khao Kho">
+      </div>
+      <div class="feature-text">
+        <h3>Khao Kho</h3>
+        <div class="tag-row">
+          <span class="tag-pill">National park</span>
+          <span class="tag-pill">Viewpoints</span>
+          <span class="tag-pill">Monuments</span>
+        </div>
+        <p>
+          Khao Kho National Park strings a road of ridgeline viewpoints and
+          monuments across the highest ground in the province. Morning cloud
+          pours through the forest below while the road stays clear above it &mdash;
+          pull off at any of the marked lookouts for the view.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-media">
+        <img src="images/phu-thap-boek.jpg" alt="Sunrise over a sea of clouds seen from a campsite on Phu Thap Boek">
+      </div>
+      <div class="feature-text">
+        <h3>Phu Thap Boek</h3>
+        <div class="tag-row">
+          <span class="tag-pill">Sunrise point</span>
+          <span class="tag-pill">Sea of fog</span>
+        </div>
+        <p>
+          The province's best-known sunrise spot. Arrive while it's still dark
+          and claim a place on the ridge &mdash; as the sky lightens, the entire
+          valley below disappears under a slow, rolling sea of cloud until the
+          sun burns it back.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="food-section">
+    <div class="food-band">
+      <img src="images/strawberry-farm.jpg" alt="A farmer harvesting strawberries on a terraced hillside farm">
+      <div class="food-band-text">
+        <p class="eyebrow">Food &amp; local products</p>
+        <h3>Cool-climate strawberries</h3>
+        <p>
+          The same cool air that makes the sunrise views possible also grows
+          strawberries most of Thailand can't. Terraced farms across the
+          highlands open their rows for picking through the winter, alongside
+          honey, coffee and other highland produce sold roadside.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="market-section">
+    <p class="eyebrow">Recommended</p>
+    <h2>Restaurants &amp; markets</h2>
+    <p style="max-width: 56ch; color: var(--forest);">
+      A few categories worth building into a trip &mdash; ask locally for the
+      current best spot in each, as small stalls and seasonal markets move
+      around.
+    </p>
+
+    <div class="market-grid">
+      <div class="market-card">
+        <p class="mono">VIEWPOINT CAFÉS</p>
+        <h4>Coffee with a view</h4>
+        <p>Small cafés built right onto the ridgelines near Khao Kho and Phu Thap Boek, best caught at sunrise.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">ROADSIDE FARM STALLS</p>
+        <h4>Strawberries &amp; produce</h4>
+        <p>Fresh-picked strawberries, jams and highland produce sold directly from the farms along the mountain roads.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">MORNING MARKETS</p>
+        <h4>Local town markets</h4>
+        <p>Early markets in the district towns for northern Thai breakfast dishes, sticky rice and grilled snacks.</p>
+      </div>
+      <div class="market-card">
+        <p class="mono">MOUNTAIN KITCHENS</p>
+        <h4>Northern Thai cuisine</h4>
+        <p>Family-run restaurants serving regional dishes suited to the cool climate &mdash; hearty stews and grilled pork are local favorites.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Phetchabun Tourism &mdash; a highland province in Thailand's lower north.</p>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.quick-links');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+</script>
+
+</body>
+</html>
